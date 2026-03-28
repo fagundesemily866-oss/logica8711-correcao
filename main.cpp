@@ -3,19 +3,13 @@
 
 int main(){
 
-    int num1 = 8;
-    int num2 = 2;
-    int soma, subt, mult, div;
+    int idade = 16;
+    float altura = 1.60;
+    std::string nome = "Emily";
 
-    soma = num1 + num2;
-    subt = num1 - num2;
-    mult = num1 * num2;
-    div = num1 / num2;
-
-    std::cout << "Soma: " << soma << std::endl;
-    std::cout << "Subtração: " << subt << std::endl;
-    std::cout << "Multiplicação: " << mult << std::endl;
-    std::cout << "Divisão: " << div << std::endl;
+    std::cout << "Minha idade é" << idade << std::endl;
+    std::cout << "Minha altura é" << altura << std::endl;
+    std::cout << "Meu nome é" << nome << std::endl;
 
     return 0;
 }
