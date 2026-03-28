@@ -2,8 +2,15 @@
 #include<string>
 
 int main(){
-std::string nome;
+    std::string nome;
+    int idade;
+    float altura;
+    
 
+    std::cout<<"Qual sua idade:"<<std::endl;
+    std::cin>>idade;
+    std::cout<<"Qual sua altura:"<<std::endl;
+    std::cin>>altura;
     std::cout<<"Qual seu nome:"<<std::endl;
     std::cin>>nome;
 
