@@ -17,5 +17,3 @@ int main(){
     std::cout<<"Bem -vindo(a) "<<nome<<"!!"<<std::endl;
 }
   return 0;
-
-
