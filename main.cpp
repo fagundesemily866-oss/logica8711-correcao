@@ -1,24 +1,13 @@
 #include<iostream>
-#include<string>
 
 int main(){
 
-int a;
-int b;
-//int a,b;
+int soma1 = 100 + 50;
+int soma2 = soma1 + 50;
+int soma3 = soma2 + 100;
 
-std::cout<<"digite um valor para A:"<<std::endl;
-std::cin>>a;
-
-std::cout<<"digite um valor para B:"<<std::endl;
-std::cin>>b;
-
-std::cout<<(a > b)<<std::endl;
-std::cout<<(a >= b)<<std::endl;
-
-int a =10;
-int b = 10;
-
+std::cout<<soma2<<std::endl;
+std::cout<<soma3<<std::endl;
 
 return 0;
 }
