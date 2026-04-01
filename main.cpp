@@ -19,16 +19,6 @@ std::cout<<texto<<std::endl;
 
 
 
-return 0;
-
-}
- 
-
-
-
-
-
-
 
 return 0;
 }
