@@ -2,9 +2,16 @@
 
 int main(){
 
-   bool condicao = true; 
- //g++ main.cpp -o programa
+   
+char letra = 'E';
 
+
+std::cout<<letra<<std::endl;
+
+
+
+
+ 
 
 
 
