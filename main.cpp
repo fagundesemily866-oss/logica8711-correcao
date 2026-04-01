@@ -1,21 +1,28 @@
 #include<iostream>
+#include<string>
+
 
 int main(){
 
-   
-  auto num1 = 10;
-auto num2 = 15.80f;
-auto letra = 'E';
-auto texto = "Emily";
+  std::string nome;
+  int idade;
+  int anoatual = 2026;
+  int anonascimento;
 
 
-std::cout<<num1<<std::endl;
+ std::cout<< "Qual é o seu nome?";
+ std::cin>> nome;
 
-std::cout<<num2<<std::endl;
 
-std::cout<<letra<<std::endl;
+  std::cout<< "Qual é a sua idade?";
+  std::cin>> idade;
 
-std::cout<<texto<<std::endl; 
+  anonascimento = anoatual - idade;
+
+  std::cout<< "Olá, " << nome << "! Você nasceu em " << anonascimento << ".";
+
+
+
 
 
 
