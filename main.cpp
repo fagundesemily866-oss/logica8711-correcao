@@ -2,10 +2,9 @@
 
 int main(){
 
-int a = 1;
- int b = 6;
+   bool condicao = true; 
+ //g++ main.cpp -o programa
 
- std::cout<<((a > b) || (a + b) >=16)<<std::endl;
 
 
 
