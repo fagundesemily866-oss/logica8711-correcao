@@ -2,18 +2,14 @@
 #include<string>
 
 
-int main(){
+int main() {
+
+int num1, num2, num3, soma;
+std::cout<<"Digite o numero 1: "<<std::endl;
+std::cin>>num1;
 
 
-  int result1 = 4 + 4 * 2;
-  int result2 = 4 + 4 / 2; 
-  int result3 = (4 + 4) * 2; 
-  
-
-
-  std::cout<<result1<<std::endl;
-  std::cout<<result2<<std::endl;
-  std::cout<<result3<<std::endl;
+std::cout<<"\n\nO num 1 e "<<num1<<"\n";
 
 
 
