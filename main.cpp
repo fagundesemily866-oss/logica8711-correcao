@@ -4,22 +4,17 @@
 
 int main(){
 
-  std::string nome;
-  int idade;
-  int anoatual = 2026;
-  int anonascimento;
+
+  int result1 = 4 + 4 * 2;
+  int result2 = 4 + 4 / 2; 
+  int result3 = (4 + 4) * 2; 
+  
 
 
- std::cout<< "Qual é o seu nome?";
- std::cin>> nome;
+  std::cout<<result1<<std::endl;
+  std::cout<<result2<<std::endl;
+  std::cout<<result3<<std::endl;
 
-
-  std::cout<< "Qual é a sua idade?";
-  std::cin>> idade;
-
-  anonascimento = anoatual - idade;
-
-  std::cout<< "Olá, " << nome << "! Você nasceu em " << anonascimento << ".";
 
 
 
