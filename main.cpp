@@ -4,13 +4,11 @@
 
 int main() {
 
-int num1, num2, num3, soma;
-std::cout<<"Digite o numero 1: "<<std::endl;
-std::cin>>num1;
+std::string nome = "Emily";
+std::string sobrenome = "Passos";
 
 
-std::cout<<"\n\nO num 1 e "<<num1<<"\n";
-
+std::cout<<nome + " " + sobrenome<<std::endl;
 
 
 
