@@ -4,12 +4,12 @@
 
 int main(){
 
+std::string name = "Emily";
 
-int a = 40;
-std::string d = "10";
+std::cout<<"Nome tem: "<<name.length()<<" letras"<<std::endl;
+std::cout<<"Nome tem: "<<name.size()<<" letras"<<std::endl; 
 
 
-std::cout<<a+d<<std::endl;
 
 
 
