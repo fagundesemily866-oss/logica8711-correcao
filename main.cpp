@@ -4,10 +4,9 @@
 
 int main(){
 
-std::string name = "Emily";
+int emily[5] = {10,20,30,40,50};
 
-std::cout<<"Nome tem: "<<name.length()<<" letras"<<std::endl;
-std::cout<<"Nome tem: "<<name.size()<<" letras"<<std::endl; 
+std::cout<<emily[1];
 
 
 
