@@ -3,24 +3,19 @@
 
 
 
-int main(){
+int main() {
 
+    int idade;
 
-    std::string user;
-    std::string senha;
+    std::cout << "Digite a sua idade: "<<std::endl;
+    std::cin >> idade;
 
-    std::cout<<"digite seu usuario de acesso: ";
-    std::cin>>user;
-
-    std::cout<<"digite sua senha de acesso: ";
-    std::cin>>senha;
-
-
-    if(senha == "913006"){
-        std::cout<<" O usuario "<<user<<" esta logado com sucesso!"<<std::endl;
-    }else{
-        std::cout<<" O usuario ou senha invalidos!"<<std::endl;
+    
+    if(idade >= 18) {
+        std::cout << "Voce e maior de idade." << std::endl;
+    } else {
+        std::cout << "Voce e menor de idade." << std::endl;
     }
 
-return 0;
+    return 0;
 }
