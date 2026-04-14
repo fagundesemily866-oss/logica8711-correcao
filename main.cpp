@@ -1,37 +1,38 @@
 #include <iostream>
 
 int main() {
-    int idade;
+    
 
-    int opcaoPagamento;
-    int qtdParafuso;
-    float valorParafuso = 1.20;
-    float valortotalparafuso;
-    float desconto;
-    float juros;
+std::string nome;
+float altura;
+int idade;
 
-    std::cout << "Digite a quantidade de parafusos desejada: " << std::endl;
-    std::cin >> qtdParafuso;
+std::cout << "Bem vindo, digite seu nome: ";
+std::cin >> nome;
+std::cout << "Digite sua altura: ";
+std::cin >> altura;
+std::cout << "Digite sua idade: ";
+std::cin >> idade;
 
-    valortotalparafuso = qtdParafuso * valorParafuso;
+std::cout << "Nome: " << nome << std::endl;
+std::cout << "Altura: " << altura << std::endl;
+std::cout << "Idade: " << idade << std::endl;
 
-    std::cout << " a forma de pagamento e : " << std::endl;
-    std::cout << "--- 1 - pix ---" << std::endl;
-    std::cout << "--- 2 - dinheiro ---" << std::endl;
-    std::cout << "--- 3 - cartao de credito ---" << std::endl;
-    std::cin >> opcaoPagamento;
 
-    if(opcaoPagamento == 1){
-        std::cout << "O valor total a ser pago e: " << valortotalparafuso * 0.95 << std::endl;
-    } else if(opcaoPagamento == 2){
-        desconto = valortotalparafuso * 0.90;
-    std::cout << "sua compra ficou no valor total de : " << desconto << std::endl;
-    } else if(opcaoPagamento == 3){
-        std::cout << "O valor total a ser pago e: " << valortotalparafuso << std::endl;
-    }else {
-        juros = valortotalparafuso * 0.10;
-        std::cout << "O valor total a ser pago e: " << valortotalparafuso + juros << std::endl;
-    }
+if  (idade >= 10) {
+    std::cout << "Voce se inscreveu na categoria infantil !!" << std::endl;
+}else if (idade >= 18) {
+    std::cout << "Voce se inscreveu na categoria adolescente !!" << std::endl;
+}else if (idade >= 60) {
+    std::cout << "Voce se inscreveu na categoria adulto !!" << std::endl;
 
-    return 0;
+std::cout << "Seja muito bem vindo " << nome << " a nossa competicao de natação !!" << std::endl;
+
+} 
+
+return 0;
+
 }
+
+
+ 
