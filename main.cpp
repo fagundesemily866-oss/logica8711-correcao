@@ -1,8 +1,8 @@
 #include <iostream>
 
 int main() {
-    for(int i = 0; i < 10; i++){
-    std::cout<<"este e um loop!!"<<std::endl;
+    for(int i = 10; i >= 0; i--){
+    std::cout<<"A bomba ira explodir em..."<<i<<std::endl;
     }
     
 
