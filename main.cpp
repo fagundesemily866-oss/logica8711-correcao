@@ -3,17 +3,19 @@
 
 int main() {
  
-int quantidade;
-do{
-    std::cout<<"Digite a quantidade em estoque (Deve ser maior que 0): "<<std::endl;
-    std::cin>>quantidade;
+    for (int i = 0; i < 10; i ++) {
 
- }while(quantidade<=0);
- 
- std::cout<<"Estoque atualizado: "<<quantidade<<" unidades."<<std::endl;
+        if(i == 4){
+            
+            break;
+        }
+        std::cout<<i<<std::endl;
+        
+    
+    }
 
-
-
-
-return 0;
+    return 0;
 }
+
+
+
