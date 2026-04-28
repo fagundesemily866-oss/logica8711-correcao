@@ -1,18 +1,15 @@
 #include <iostream>
 
-int main() {
- 
-    int mynumbers[5] = {1, 2, 3, 4, 5};
+ void myFunction(){
+    std::cout<<"Ola mundo!!"<<std::endl;
+}
 
-//for(int i = 0; i < 5; i++){
-//    std::cout<<mynumbers[i]<<std::endl;
-//}
+int main(){
 
-for(int num : mynumbers){
-    std::cout<<num<<std::endl;
-    }
-
+    myFunction();
+    
     return 0;
+
 }
 
 
