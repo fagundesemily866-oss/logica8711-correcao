@@ -1,15 +1,12 @@
 #include <iostream>
-#include<vector>
 
 int main() {
  
-    std::vector<std::string>cars= {"Volvo", "BMW" , "Mercedes"};
-        
-    cars.push_back("Madza");
+    int mynumbers[5] = {1, 2, 3, 4, 5};
 
-    for(std::string car : cars){
-        std::cout<<car<<std::endl;
+for(int i = 0; i < 5; i++){
 
+    std::cout<<mynumbers[i]<<std::endl;
     }
 
     return 0;
