@@ -4,9 +4,12 @@ int main() {
  
     int mynumbers[5] = {1, 2, 3, 4, 5};
 
-for(int i = 0; i < 5; i++){
+//for(int i = 0; i < 5; i++){
+//    std::cout<<mynumbers[i]<<std::endl;
+//}
 
-    std::cout<<mynumbers[i]<<std::endl;
+for(int num : mynumbers){
+    std::cout<<num<<std::endl;
     }
 
     return 0;
