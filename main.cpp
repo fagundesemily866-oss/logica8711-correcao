@@ -1,20 +1,18 @@
 #include <iostream>
 #include <string>
 
-int myFunction(int x ){
-    return 5 + x;
-
+int doubleGame(int x){
+    return x * 2;
 }
 
 int main(){
+     for(int i = 1; i <= 5; i++){
+        std::cout << "O dobro de " << i << " é " << doubleGame(i) << std::endl;
 
-   std::cout<<myFunction(3)<<std::endl; 
-
+     }
+     
     return 0;
 }
-
-
-
 
 
 
