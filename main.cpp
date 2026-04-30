@@ -2,31 +2,30 @@
 
 int main(){
 
-int opcao;
-std::string nome;
-int idade;
+int choice;
+float temp, converted;
 
-std::cout<<"-----Escolha a opcao adequada-----"<<std::endl;
-std::cout<<"Digite 1 para cadastrar ou 2 para sair"<<std::endl;
-std::cin>>opcao;
+std::cout << "Temperature Converter" << std::endl;
+std::cout << "1. Celsius to Fahrenheit" << std::endl;
+std::cout << "2. Fahrenheit to Celsius" << std::endl;
+std::cin >> choice;
 
-if(opcao == 1){
-    
-    std::cout<<"Digite seu nome: ";
-    std::cin>>nome;
-    std::cout<<"Digite sua idade: ";
-    std::cin>>idade;
-    std::cout<<"Cadastro realizado com sucesso!"<<std::endl;
 
-std::cout<<"Seu nome e : "<<nome<<std::endl;
-std::cout<<"Sua idade e : "<<idade<<std::endl;
+ if (choice == 1){
+std::cout << "Enter temperature in Celsius: ";
+std::cin >> temp;
+converted = (temp * 1.8) + 32;
+std::cout << temp << "C is " << converted << "F" << std::endl;
 
+}else if (choice == 2){
+std::cout << "Enter temperature in Fahrenheit: ";
+std::cin >> temp;
+converted = (temp - 32) / 1.8;
+std::cout << temp << "F is " << converted << "C" << std::endl;
 }else{
-
-    std::cout<<"Ate a proxima!!!"<<std::endl;
+ std::cout << "Invalid option" << std::endl;
 }
-     
-     
+
     return 0;
 }
 
