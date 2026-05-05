@@ -1,35 +1,31 @@
 #include <iostream>
 
-int main(){
+int main() {
+ 
+  std::string nomeCompleto;
 
-int num;
-std::cout<<"Digite um valor para num: ";
-std::cin>>num;
+  std::cout<<"Digite o seu nome completo: ";
+  std::getline(std::cin, nomeCompleto);
 
-
-if(num%2){
-    std::cout<<"esse valor e impar"<<std::endl;
-}else{
-    std::cout<<"esse valor e par"<<std::endl;
-}
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
+  std::cout<<nomeCompleto<<std::endl;
 
     return 0;
 }
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
