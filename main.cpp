@@ -1,97 +1,72 @@
-#include <iostream>
+#include<iostream>
 
-float somar(float a, float b) {
-    return a + b;
+double saldo = 1000.0;
+std::string titular = "Emily";
+
+void exibirSaldo(){ 
+    std::cout<<titular<<"=====Saldo: R$ "<<saldo<<std::endl;
 }
-
-float subtrair(float a, float b) {
-    return a - b;           
-}
-
-float multiplicar(float a, float b) {
-    return a * b;
-}
-
-float dividir(float a, float b) {
-    if (b == 0) {   
-        std::cout<<"Nao e possivel dividir por 0 !"<<std::endl;
-
-        return a / b;
+    void depositar(double valor){ 
+    if (valor > 0){ 
+saldo += valor;
+std::cout<<"Deposito realizado com sucesso!"<<std::endl;
+    }else{ 
+ std::cout<<"Valor invalido!"<<std::endl;
     }
+ }
+void sacar(double valor){ 
+     if (valor > 0 && valor <= saldo){ 
+saldo = valor;
+std::cout<<"Saldo insuficiente ou valor invalido!"<<std::endl;
+     }
+ }
 
-    return 0;
+void exibirMenu(){ 
+    std::cout<<"\n == MENU CONTA BANCARIA == "<<std::endl;
+    std::cout<<"1 = ver saldo"<<std::endl;
+    std::cout<<"2 = depositar"<<std::endl;
+    std::cout<<"3 = sacar"<<std::endl;
+    std::cout<<"4 = sair"<<std::endl;
+    std::cout<<"Digite uma opcao: "<<std::endl;
+
 }
-
-void coletarNumero(float &a, float &b) {
-    std::cout << "Digite um valor para a:" << std::endl;
-    std::cin >> a;
-
-    std::cout << "Digite um valor para b:" << std::endl;
-    std::cin >> b;
-}
-
-void exibirResultado(float &a, float &b) {
-
-    coletarNumero(a, b);
-
-    int op;
-
-    std::cout << "Escolha a operação: " << std::endl;
-    std::cout << "1 - Somar" << std::endl;
-    std::cout << "2 - Subtrair" << std::endl;
-    std::cout << "3 - Multiplicar" << std::endl;
-    std::cout << "4 - Dividir" << std::endl;
-
-    std::cin >> op;
-
-    switch(op){ 
-
-        case 1:
-            std::cout << "O resultado e :" 
-                      << somar(a, b) << std::endl;
-            break;
-
-        case 2:
-            std::cout << "O resultado e :" 
-                      << subtrair(a, b) << std::endl;
-            break;
-
-        case 3:
-            std::cout << "O resultado e :" 
-                      << multiplicar(a, b) << std::endl;
-            break;
-
-        case 4:
-            std::cout << "O resultado e :" 
-                      << dividir(a, b) << std::endl;
-            break;
-
-        default:
-            std::cout << "Voce digitou um valor invalido !" 
-                      << std::endl;
-    }
-}
-
 int main(){ 
 
-    float num1 = 0, num2 = 0;
+int opcao;
+double valor;
 
-    exibirResultado(num1, num2);
+do{ 
 
-    return 0;
+    exibirMenu();
+    std::cin>>opcao;
+
+    switch (opcao){ 
+    case 1:
+    exibirSaldo();
+    break;
+
+    case 2:
+    std::cout<<"Digite o valor da opcao"<<std::endl;
+    std::cin>>valor;
+    deposito: (valor);
+    break;
+
+    case 3:
+    std::cout<<"Digite o valor a sacar"<<std::endl;
+    std::cin>>valor;
+    sacar(valor);
+    break;
+
+    case 4:
+    std::cout<<"Saindo da conta..."<<std::endl;
+    break;
+    default :
+    std::cout<<"Opcao invalida!"<<std::endl;
 }
+}while(opcao != 4);
 
-
- 
-
-
-
-
-
-
-
-
-
+return 0;
+}
 
 
 
