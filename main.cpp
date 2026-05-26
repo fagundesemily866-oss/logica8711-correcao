@@ -1,16 +1,29 @@
 #include<iostream>
-#include<format>
-#include<string>
 
- 
-int main(){ 
-     
-   std::string nome = "Eduardo";
+   long long calcularFatorial(int n) {
+        long long resultado = 1;
 
-   std::string mensagem = std::format("Olá, {}! Você tem {} anos.\n",nome);
-   std::cout<<mensagem;
+        for(int i = 1; i <= n; ++i){
+            resultado *= i;
+        }
+        return resultado;
+    }
 
- return 0;
+int main() {
+    int numero;
+
+    std::cout<<"Digite um número para calcular o fatorial: ";
+    std::cin >> numero;
+
+    if(numero < 0){
+      std::cout<<"Erro fatorial de numero negativo nao existe ! ." << std::endl;
+    }else{
+      long long fatorial = calcularFatorial(numero);
+      std::cout<<numero<<"! = "<<fatorial<<std::endl;
+    }
+
+    return 0;
+
 }
 
 
