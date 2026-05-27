@@ -1,18 +1,31 @@
 #include<iostream>
- int main ()
- {
+ 
+int encontrarMaior(int arr[], int tamanho) {
+    int maior = arr[0]; // Inicializa o maior com o primeiro elemento do array
+
+    for (int i = 1; i < tamanho; i++) {
+        if (arr[i] > maior) {
+            maior = arr[i]; // Atualiza o maior se encontrar um valor maior
+        }
+    }
+
+    return maior; // Retorna o maior valor encontrado
+}
+
+int main() {
     int numeros[5];
-    int soma = 0;
 
-    for(int i = 0; i < 5; i++){ 
-         std::cout << "Digite o numero: "<<(i + 1)<<std::endl;
-         std::cin >> numeros[i];
-         soma += numeros[i];
-      }
+    std::cout<<"Digite 5 numeros: "<<std::endl;
+    for(int i = 0; i < 5; i ++){
+        std::cout<<"Digite o numero "<<(i + 1)<<": ";
+        std::cin>>numeros[i];
 
-      std::cout<<"soma: "<<soma<<std::endl;
- }
+    }
+    
+    std::cout<<"Maior numero: "<<encontrarMaior(numeros, 5)<<std::endl;
 
+    return 0;
+}
 
     
 
