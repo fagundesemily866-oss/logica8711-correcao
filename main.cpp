@@ -1,18 +1,24 @@
 #include<iostream>
 
+void imprimirAteN(int n){
+   for(int i = n; i > 0; i--){
+      std::cout<<n<< " ";
+   }
 
-int cubo (int y){
-    return y * y;
 }
 
-int main() {
+int main(){
+  int numero;
+    std::cout << "Digite um numero: "<<std::endl;
+    std::cin >> numero;
 
-    std::cout<<" cubo de 5: "<<cubo(5)<<std::endl;
-    std::cout<<" cubo de 8: "<<cubo(8)<<std::endl;
-    std::cout<<" cubo de 10: "<<cubo(10)<<std::endl;
+    imprimirAteN(numero);
 
     return 0;
 }
+
+
+    
 
 
    
