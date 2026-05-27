@@ -1,33 +1,22 @@
 #include<iostream>
+#include<tuple>
+#include<string> 
 
-bool eprimo(int numero){
-    if(numero <= 1){
-         return false;
+int main(){
+    std::tuple<int, std::string, double> aluno(1,"Emily", 9.5);
 
-      }
+     auto myTuple = std::make_tuple(1, "Emily", 9.5);
 
-    for(int i = 2; i < numero; i++){
-        if(numero % i == 0){ 
-        return false;
-       }
-    }
+    
+    std::cout<< "Id: "<<std::get<0>(aluno)<<"\n";
+    std::cout<< "Nome: "<<std::get<1>(aluno)<<"\n";
+    std::cout<< "Nota: "<<std::get<2>(aluno)<<"\n";
 
-    return true;
-}
- int main(){
-    int numero;
-
-    std::cout << "Digite um numero: ";
-    std::cin >> numero;
-
-    if(eprimo(numero)){
-        std::cout << numero << " é um número primo." << std::endl;
-    } else {
-        std::cout << numero << " não é um número primo." << std::endl;
-    }
+ 
 
     return 0;
 }
+
 
  
 
