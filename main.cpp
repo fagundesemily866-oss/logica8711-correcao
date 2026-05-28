@@ -1,18 +1,21 @@
 #include <iostream>
 
+void contar(int numero){
+    if(numero == 0){
+      std::cout<<"PARE!!"<<std::endl;
+        return;
+    }
+    std::cout<<numero<<"\n";
+     contar(numero-1);
+}
+
 int main(){
-   int fibonacci[10];
 
-    fibonacci[0] = 1;
-    fibonacci[1] = 1;
+   contar(5);
 
-    for(int i = 2; i < 10; i++){
-        fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
-    }
 
-    for(int i = 0; i < 10; i++){ 
-         std::cout<<fibonacci[i]<<"\n";
-    }
+
+
 
     return 0;
 }
