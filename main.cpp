@@ -8,7 +8,7 @@ int fibonacci(int n){
 }
 
 int main(){
-    std::cout<<fibonacci(6)<<std::endl;
+    std::cout<<fibonacci(3)<<std::endl;
     return 0;
 }
  
