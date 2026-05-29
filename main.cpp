@@ -1,21 +1,16 @@
 #include <iostream>
- void tabuada(int numero, int multiplicador){
-    if(multiplicador == 0){
-        return;
+ 
+int somarVetor(int vetor[], int indice){
+      if(indice == 0){
+        return vetor [0];
     }
-    tabuada(numero, multiplicador - 1);
-    std::cout<<numero<<" x "<<multiplicador<<" = "<<numero * multiplicador<<std::endl;
- }
 
-int main(){ 
+     return vetor[indice] + somarVetor (vetor, indice - 1);
+}
 
-   int numero;
-   int multiplicador;
-   int num1, num2;
-
-   std::cout<<" Digite um valor para num1: "<<std::endl;
-   std::cin>>num1;
-   std::cout<<" Digite um valor para num2: "<<std::endl;
-   std::cin>>num2;
-   tabuada(num1, num2);
+int main() {
+    int numeros[5] = {10, 20, 30, 40, 50};
+   
+    std::cout<<" Soma recursiva: "<<somarVetor(numeros, 4)<<std::endl;
+    return 0;
 }
