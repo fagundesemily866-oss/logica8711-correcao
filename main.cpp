@@ -3,31 +3,22 @@
 
 struct Aluno{
     std::string nome;
-    float nota1;
-    float nota2;
+    float nota;
+    
 };
-
-float calcularMedia(Aluno a ){
-    return (a.nota1 + a.nota2) / 2;
-}
 
 int main(){
 
-    Aluno aluno;
+    Aluno alunos[3]={
+        {"Joao", 8.5},
+        {"Maria", 10},
+        {"Pedro", 7.0}
+    };
 
-    std::cout<<"Digite o nome do aluno: ";
-    std::getline(std::cin, aluno.nome);
-    
-    std::cout<<"Digite a nota 1: ";
-    std::cin>>aluno.nota1;
+    for(int i = 0; i < 3; i++){
+        std::cout<<alunos[i].nome<<": "<<alunos[i].nota<<std::endl;
+    }
 
-    std::cout<<"Digite a nota 2: ";
-    std::cin>>aluno.nota2;
-
-    float media = calcularMedia(aluno);
-
-    std::cout<<aluno.nome<<" - Media "<<media<<std::endl;
- 
 
     return 0;
 }
