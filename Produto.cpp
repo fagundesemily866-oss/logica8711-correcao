@@ -19,20 +19,70 @@ void adicionarProduto() {
 
     std::cout << "\n------- Adicionar Produto -------" << std::endl;
 
-    std::cout << "Digite o ID do produto: ";
+    std::cout << "Digite o ID: ";
     std::cin >> produtos[quantidadeProdutos].id;
 
     std::cin.ignore();
 
-    std::cout << "Digite o nome do produto: ";
+    std::cout << "Digite o nome: ";
     std::getline(std::cin, produtos[quantidadeProdutos].nome);
 
-    std::cout << "Digite o preco do produto: ";
+    std::cout << "Digite o preco: ";
     std::cin >> produtos[quantidadeProdutos].preco;
 
     quantidadeProdutos++;
 
     std::cout << "Produto cadastrado com sucesso!" << std::endl;
+}
+
+void exibirProdutos() {
+
+    if (quantidadeProdutos == 0) {
+        std::cout << "Nenhum produto cadastrado." << std::endl;
+        return;
+    }
+
+    std::cout << "\n------- Lista de Produtos -------" << std::endl;
+
+    for (int i = 0; i < quantidadeProdutos; i++) {
+
+        std::cout << "ID: " << produtos[i].id << std::endl;
+        std::cout << "Nome: " << produtos[i].nome << std::endl;
+        std::cout << "Preco: R$ " << produtos[i].preco << std::endl;
+        std::cout << "------------------------" << std::endl;
+    }
+}
+
+void buscarProduto() {
+
+    if (quantidadeProdutos == 0) {
+        std::cout << "Nenhum produto cadastrado." << std::endl;
+        return;
+    }
+
+    int idBuscado;
+    bool encontrado = false;
+
+    std::cout << "\nDigite o ID do produto: ";
+    std::cin >> idBuscado;
+
+    for (int i = 0; i < quantidadeProdutos; i++) {
+
+        if (produtos[i].id == idBuscado) {
+
+            std::cout << "\nProduto encontrado!" << std::endl;
+            std::cout << "ID: " << produtos[i].id << std::endl;
+            std::cout << "Nome: " << produtos[i].nome << std::endl;
+            std::cout << "Preco: R$ " << produtos[i].preco << std::endl;
+
+            encontrado = true;
+            break;
+        }
+    }
+
+    if (!encontrado) {
+        std::cout << "Produto nao encontrado." << std::endl;
+    }
 }
 
 void deletarProduto() {
@@ -62,57 +112,7 @@ void deletarProduto() {
         }
     }
 
-    std::cout << "Produto nao encontrado!" << std::endl;
-}
-
-void exibirProdutos() {
-
-    if (quantidadeProdutos == 0) {
-        std::cout << "Nenhum produto cadastrado." << std::endl;
-        return;
-    }
-
-    std::cout << "\n------- Lista de Produtos -------" << std::endl;
-
-    for (int i = 0; i < quantidadeProdutos; i++) {
-
-        std::cout << "ID: " << produtos[i].id << std::endl;
-        std::cout << "Nome: " << produtos[i].nome << std::endl;
-        std::cout << "Preco: " << produtos[i].preco << std::endl;
-        std::cout << "---------------------" << std::endl;
-    }
-}
-
-void buscarProduto() {
-
-    if (quantidadeProdutos == 0) {
-        std::cout << "Nenhum produto cadastrado." << std::endl;
-        return;
-    }
-
-    int idBuscado;
-    bool produtoEncontrado = false;
-
-    std::cout << "\nDigite o ID do produto: ";
-    std::cin >> idBuscado;
-
-    for (int i = 0; i < quantidadeProdutos; i++) {
-
-        if (produtos[i].id == idBuscado) {
-
-            std::cout << "\nProduto encontrado!" << std::endl;
-            std::cout << "ID: " << produtos[i].id << std::endl;
-            std::cout << "Nome: " << produtos[i].nome << std::endl;
-            std::cout << "Preco: " << produtos[i].preco << std::endl;
-
-            produtoEncontrado = true;
-            break;
-        }
-    }
-
-    if (!produtoEncontrado) {
-        std::cout << "Produto nao encontrado!" << std::endl;
-    }
+    std::cout << "Produto nao encontrado." << std::endl;
 }
 
 int menu() {
