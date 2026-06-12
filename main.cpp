@@ -1,14 +1,73 @@
-#include<iostream>
-//algoritimo de horner
-int horner(int* coeficientes, int grau, int x){
-    int resultado = coeficientes[grau];
-     for(int i = grau - 1; i >= 0; i--){
-        resultado = resultado * x + coeficientes[i];
-     }
-     return resultado;
+#include <iostream>
+#include <string>
+#include <cctype>
+
+int main() {
+
+    std::string palavra = "programacao";
+    std::string adivinhada = "";
+
+    int erros = 0;
+    int maxErros = 6;
+    bool ganhou = false;
+
+    for (int i = 0; i < palavra.length(); i++) {
+        adivinhada += "_";
     }
-int main(){
-    int coef[] = {5, 4, 3, 2};
-std::cout<<"p(2) = "<<horner(coef, 3, 2)<<std::endl;
-return 0;
+
+    std::cout << "========== JOGO DA FORCA =========" << std::endl;
+    std::cout << "Adivinhe a palavra !!" << std::endl;
+    std::cout << std::endl;
+
+    while (erros < maxErros && !ganhou) {
+
+        std::cout << "Palavra: ";
+
+        for (int i = 0; i < adivinhada.length(); i++) {
+            std::cout << adivinhada[i] << " ";
+        }
+
+        std::cout << std::endl;
+        std::cout << "Erros: " << erros << "/" << maxErros << std::endl;
+
+        char letra;
+        std::cout << "Digite uma letra: ";
+        std::cin >> letra;
+
+        letra = std::tolower(letra);
+
+        bool encontrou = false;
+
+        for (int i = 0; i < palavra.length(); i++) {
+            if (palavra[i] == letra) {
+                adivinhada[i] = letra;
+                encontrou = true;
+            }
+        }
+
+        if (!encontrou) {
+            std::cout << "Letra errada!" << std::endl;
+            erros++;
+        } else {
+            std::cout << "Letra encontrada!" << std::endl;
+        }
+
+        if (adivinhada == palavra) {
+            ganhou = true;
+        }
+
+        std::cout << std::endl;
+    }
+
+    std::cout << "====================" << std::endl;
+
+    if (ganhou) {
+        std::cout << "Parabens! Voce venceu!" << std::endl;
+        std::cout << "A palavra era: " << palavra << std::endl;
+    } else {
+        std::cout << "Game Over! Voce perdeu!" << std::endl;
+        std::cout << "A palavra era: " << palavra << std::endl;
+    }
+
+    return 0;
 }
