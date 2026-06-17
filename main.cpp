@@ -1,73 +1,57 @@
 #include <iostream>
 #include <string>
-#include <cctype>
+
+struct Jogador {
+    std::string nome;
+    std::string time;
+    int gols;
+};
 
 int main() {
+    Jogador jogadores[5];
 
-    std::string palavra = "programacao";
-    std::string adivinhada = "";
-
-    int erros = 0;
-    int maxErros = 6;
-    bool ganhou = false;
-
-    for (int i = 0; i < palavra.length(); i++) {
-        adivinhada += "_";
-    }
-
-    std::cout << "========== JOGO DA FORCA =========" << std::endl;
-    std::cout << "Adivinhe a palavra !!" << std::endl;
+    std::cout << "=========== COPA - RANKING DE GOLEADORES ===========" << std::endl;
     std::cout << std::endl;
 
-    while (erros < maxErros && !ganhou) {
+    for (int i = 0; i < 5; i++) {
+        std::cout << "Jogador " << (i + 1) << ":" << std::endl;
 
-        std::cout << "Palavra: ";
+        std::cout << "Nome: ";
+        std::cin >> jogadores[i].nome;
 
-        for (int i = 0; i < adivinhada.length(); i++) {
-            std::cout << adivinhada[i] << " ";
-        }
+        std::cout << "Time: ";
+        std::cin >> jogadores[i].time;
 
-        std::cout << std::endl;
-        std::cout << "Erros: " << erros << "/" << maxErros << std::endl;
-
-        char letra;
-        std::cout << "Digite uma letra: ";
-        std::cin >> letra;
-
-        letra = std::tolower(letra);
-
-        bool encontrou = false;
-
-        for (int i = 0; i < palavra.length(); i++) {
-            if (palavra[i] == letra) {
-                adivinhada[i] = letra;
-                encontrou = true;
-            }
-        }
-
-        if (!encontrou) {
-            std::cout << "Letra errada!" << std::endl;
-            erros++;
-        } else {
-            std::cout << "Letra encontrada!" << std::endl;
-        }
-
-        if (adivinhada == palavra) {
-            ganhou = true;
-        }
+        std::cout << "Gols: ";
+        std::cin >> jogadores[i].gols;
 
         std::cout << std::endl;
     }
 
-    std::cout << "====================" << std::endl;
+    // Ordenação (Bubble Sort)
+    for (int i = 0; i < 5 - 1; i++) {
+        for (int j = 0; j < 5 - 1 - i; j++) {
+            if (jogadores[j].gols < jogadores[j + 1].gols) {
+                Jogador temp = jogadores[j];
+                jogadores[j] = jogadores[j + 1];
+                jogadores[j + 1] = temp;
+            }
+        }
+    }
 
-    if (ganhou) {
-        std::cout << "Parabens! Voce venceu!" << std::endl;
-        std::cout << "A palavra era: " << palavra << std::endl;
-    } else {
-        std::cout << "Game Over! Voce perdeu!" << std::endl;
-        std::cout << "A palavra era: " << palavra << std::endl;
+    std::cout << "============ RANKING ==========" << std::endl;
+    std::cout << std::endl;
+
+    for (int i = 0; i < 5; i++) {
+        std::cout << (i + 1) << "º - "
+                  << jogadores[i].nome
+                  << " (" << jogadores[i].time << ") - "
+                  << jogadores[i].gols << " gols"
+                  << std::endl;
     }
 
     return 0;
 }
+
+
+    
