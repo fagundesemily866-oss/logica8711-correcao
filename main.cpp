@@ -1,48 +1,29 @@
-#include <iostream>
-#include <string>
+#include<iostream>
+#include<string>
 
-int main() {
+struct CampeonatoCopa{
+    int ano;
+    std::string campeao;
+};
 
-    std::string time1, time2;
-    int gols1, gols2;
+int main(){
+CampeonatoCopa copa[5] = {
+    {2022, "Argentina"},
+    {2018, "Franca"},
+    {2014, "Alemanha"},
+    {2010, "Espanha"},
+    {2006, "Italia"},
+};
 
-    std::cout << "========== COMPARADOR DE PLACAR ==========" << std::endl;
-    std::cout << std::endl;
 
-    std::cout << "Time 1: ";
-    std::cin >> time1;
-    std::cout << "Gols do time 1: ";
-    std::cin >> gols1;
+std::cout<<"========Campeoes da Copa========"<<std::endl;
+std::cout<<std::endl;
 
-    std::cout << "Time 2: ";
-    std::cin >> time2;
-    std::cout << "Gols do time 2: ";
-    std::cin >> gols2;
-
-    std::cout << std::endl;
-    std::cout << "======= RESULTADO =======" << std::endl;
-
-    std::cout << time1 << " " << gols1
-              << " x "
-              << gols2 << " " << time2 << std::endl;
-
-    std::cout << std::endl;
-
-    if (gols1 > gols2) {
-        std::cout << time1 << " venceu!!!!" << std::endl;
-        std::cout << time2 << " perdeu!!!!" << std::endl;
-    }
-    else if (gols1 < gols2) {
-        std::cout << time2 << " venceu!!!!" << std::endl;
-        std::cout << time1 << " perdeu!!!!" << std::endl;
-    }
-    else {
-        std::cout << "Empate!!!" << std::endl;
-    }
-
-    return 0;
+for(int i = 0; i < 5; i++){
+    std::cout<<copa[i].ano<<" - Campeao: "<<copa[i].campeao<<std::endl;
 }
-
+ return 0;
+}
 
 
 
