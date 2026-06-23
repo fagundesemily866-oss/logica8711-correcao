@@ -1,19 +1,29 @@
-#include<iostream>
+#include<iostream>      
+
 
 int main(){
-    int pilha[5];
-    int topo = -1;
-    int tamanho = 5;
+        int fila[5];
+        int inicio = 0;
+         int fim = 0;
 
-    std::cout<<"Elementos empilhados: 10, 20, 30"<<std::endl;
-    std::cout<<std::endl;
+         std::cout << "=== FILA ===" << std::endl;
+         std::cout<<std::endl;
 
-    std::cout<<"Desempilhando..."<<std::endl;
-    while(topo >= 0){
-        std::cout<<"Removida: "<<pilha[topo]<<std::endl;
-        topo --;
-    }
-    return 0;
+         fila[0] = 100;
+         fila[1] = 200;
+         fila[2] = 300;
+         fim = 3;
+
+         std::cout<<"Elementos enfileirados: 100, 200, 300"<<std::endl;
+         std::cout<<std::endl;
+
+         std::cout<<"Desemfileirando elementos..."<<std::endl;
+         while(inicio < fim){
+                std::cout<<"Removido: "<<fila[inicio]<<std::endl;
+                inicio++;
+         }
+        
+        return 0;
 }
 
 
