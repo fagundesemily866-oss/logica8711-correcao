@@ -1,13 +1,20 @@
-#include <iostream>
+ #include <iostream>
 
 int main(){
-    int numeros[6] = {10, 20, 30, 40, 50, 60};
-    int tamanho = sizeof(numeros) / sizeof(numeros[0]);
 
-    std::cout << "========= 1. EXIBIR VALORES PREDEFINIDOS ==========" << std::endl;
-    std::cout << "Numeros armazenados" << std::endl;
+    int numeros[5];
 
-    for(int i = 0; i < tamanho; i++){
+    std::cout << "========= 1. LER E EXIBIR ==========" << std::endl;
+
+    // Leitura dos valores
+    for(int i = 0; i < 5; i++){
+        std::cout << "Digite o numero " << (i + 1) << ": ";
+        std::cin >> numeros[i];
+    }
+
+    // Exibição dos valores
+    std::cout << "Valores digitados: ";
+    for(int i = 0; i < 5; i++){
         std::cout << numeros[i] << " ";
     }
     std::cout << std::endl;
@@ -24,3 +31,4 @@ int main(){
 
 
     
+ 
