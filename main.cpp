@@ -3,28 +3,34 @@
 int main(){
 
     int numeros[10];
-    int contador = 0;
+    int buscado;
 
-    std::cout << "========= 10. CONTAR OCORRENCIAS ==========" << std::endl;
+    std::cout << "========= 11. BUSCAR ELEMENTO ==========" << std::endl;
 
-    // Leitura dos 10 números
     for(int i = 0; i < 10; i++){
         std::cout << "Digite o numero " << (i + 1) << ": ";
         std::cin >> numeros[i];
     }
 
-    // Contagem de quantas vezes o 5 aparece
+    std::cout << "Digite o numero que deseja buscar: ";
+    std::cin >> buscado;
+
+    int posicao = -1;
     for(int i = 0; i < 10; i++){
-        if(numeros[i] == 5){
-            contador++;
+        if(numeros[i] == buscado){
+            posicao = i;
+            break;
         }
     }
 
-    std::cout << "O numero 5 apareceu " << contador << " vezes." << std::endl;
+    if(posicao != -1){
+        std::cout << "Numero encontrado na posicao " << posicao << std::endl;
+    }else{
+        std::cout << "Numero nao encontrado no array." << std::endl;
+    }
 
     return 0;
 }
-
 
 
 
