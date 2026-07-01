@@ -2,36 +2,32 @@
 
 int main(){
 
-    int numeros[10];
-    int buscado;
+    int numeros[8];
+    float soma = 0;
+    float media = 0;
 
-    std::cout << "========= 11. BUSCAR ELEMENTO ==========" << std::endl;
+    std::cout << "========= 12. NUMEROS ACIMA DA MEDIA ==========" << std::endl;
 
-    for(int i = 0; i < 10; i++){
+    for(int i = 0; i < 8; i++){
         std::cout << "Digite o numero " << (i + 1) << ": ";
         std::cin >> numeros[i];
+        soma += numeros[i];
     }
 
-    std::cout << "Digite o numero que deseja buscar: ";
-    std::cin >> buscado;
+    media = soma / 8;
 
-    int posicao = -1;
-    for(int i = 0; i < 10; i++){
-        if(numeros[i] == buscado){
-            posicao = i;
-            break;
+    std::cout << "Media: " << media << std::endl;
+
+    std::cout << "Numeros acima da media: ";
+    for(int i = 0; i < 8; i++){
+        if(numeros[i] > media){
+            std::cout << numeros[i] << " ";
         }
     }
-
-    if(posicao != -1){
-        std::cout << "Numero encontrado na posicao " << posicao << std::endl;
-    }else{
-        std::cout << "Numero nao encontrado no array." << std::endl;
-    }
+    std::cout << std::endl;
 
     return 0;
 }
-
 
 
 
