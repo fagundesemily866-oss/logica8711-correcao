@@ -2,31 +2,25 @@
 
 int main(){
 
-    int numeros[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int tamanho = 10;
+    int numeros[5];
 
-    std::cout << "========= 7.8 EXIBIR PARES E IMPARES ==========" << std::endl;
-    std::cout << std::endl; 
+    std::cout << "========= 9. INVERTER ARRAY ==========" << std::endl;
 
-    std::cout << "Pares: ";
-    for(int i = 0; i < tamanho; i++){
-        if(numeros[i] % 2 == 0){
-            std::cout << numeros[i] << " ";
-        }
+    // Leitura dos 5 números
+    for(int i = 0; i < 5; i++){
+        std::cout << "Digite o numero " << (i + 1) << ": ";
+        std::cin >> numeros[i];
     }
-    std::cout << std::endl;
 
-    std::cout << "Impares: ";
-    for(int i = 0; i < tamanho; i++){
-        if(numeros[i] % 2 != 0){
-            std::cout << numeros[i] << " ";
-        }
+    // Exibição em ordem inversa
+    std::cout << "Array em ordem inversa: ";
+    for(int i = 4; i >= 0; i--){
+        std::cout << numeros[i] << " ";
     }
     std::cout << std::endl;
 
     return 0;
 }
-
 
 
 
