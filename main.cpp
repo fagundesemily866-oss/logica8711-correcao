@@ -1,36 +1,35 @@
 #include <iostream>
 
-int main(){
-
-    int numeros[10];
-    int maior;
-    int menor;
-
-    std::cout << "========= 13. MAIOR E MENOR ==========" << std::endl;
-
-    for(int i = 0; i < 10; i++){
+int dobro(int x) {
+    return x * 2;
+}
+void lerNumeros(int numeros[], int tamanho) {
+    for (int i = 0; i < tamanho; i++) {
         std::cout << "Digite o numero " << (i + 1) << ": ";
         std::cin >> numeros[i];
     }
+}
 
-    maior = numeros[0];
-    menor = numeros[0];
-
-    for(int i = 1; i < 10; i++){
-        if(numeros[i] > maior){
-            maior = numeros[i];
-        }
-        if(numeros[i] < menor){
-            menor = numeros[i];
-        }
+void exibirNumerosEDobro(int numeros[], int tamanho) {
+    std::cout << "Valores digitados e seus dobros:\n";
+    for (int i = 0; i < tamanho; i++) {
+        std::cout << "Numero: " << numeros[i]
+                  << " | Dobro: " << dobro(numeros[i]) << std::endl;
     }
+}
 
-    std::cout << "Maior numero: " << maior << std::endl;
-    std::cout << "Menor numero: " << menor << std::endl;
+int main() {
+    const int tamanho = 5;
+    int numeros[tamanho];
+
+    std::cout << "========= 1. LER E EXIBIR ==========" << std::endl;
+
+    lerNumeros(numeros, tamanho);
+    exibirNumerosEDobro(numeros, tamanho);
 
     return 0;
 }
-
+   
 
 
     
