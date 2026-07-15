@@ -4,13 +4,12 @@
 
 int main(){
 
-int soma = 0;
+const int primeiroTermo = 1; //a1
+const int ultimoTermo = 100; //an
+const int n = 100; //quantidade total de numeros
 
+int soma = ((primeiroTermo + ultimoTermo) * n)/ 2;
 
-    for(int i = 1; i <= 100; i++){
-        soma = soma + i;
-
-        std::cout<<"Soma e "<<soma<<std::endl;
-    }
+std::cout<<"A soma de todos os num de 1 a 100 é:"<<std::endl;
     return 0;
 }
