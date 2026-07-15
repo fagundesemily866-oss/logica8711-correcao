@@ -1,19 +1,13 @@
 #include <iostream>
 #include <cmath>
 
+
 int main(){
 
-int raio;
-const float pi = 3.14;
+std::cout<<"Numeros pares de 1 ate 20:"<<std::endl;
 
-std::cout<<" O raio do circulo..."<<std::endl;
-std::cin>>raio;
 
-double Area = pi*(raio*raio);
-
+    for(int i = 2; i <= 20; i+=2){
+        std::cout<<i<<" "<<std::endl;
+    }
 }
- 
-
-
-    
- 
